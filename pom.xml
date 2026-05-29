@@ -65,6 +65,13 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- H2 IN-MEMORY DATABASE (For Render) -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- POSTGRESQL (For Render) -->
         <dependency>
             <groupId>org.postgresql</groupId>
