@@ -50,6 +50,9 @@ public class Hotel {
     @ElementCollection
     private List<String> amenities;
 
+    @Column(columnDefinition = "LONGTEXT")
+    private String policies;
+
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Room> rooms;
 
@@ -180,5 +183,13 @@ public class Hotel {
 
     public void setAmenities(List<String> amenities) {
         this.amenities = amenities;
+    }
+
+    public String getPolicies() {
+        return policies;
+    }
+
+    public void setPolicies(String policies) {
+        this.policies = policies;
     }
 }
