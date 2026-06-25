@@ -53,6 +53,9 @@ public class Hotel {
     @Column(columnDefinition = "LONGTEXT")
     private String policies;
 
+    @Column(columnDefinition = "LONGTEXT")
+    private String customDetails;
+
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Room> rooms;
 
@@ -191,5 +194,13 @@ public class Hotel {
 
     public void setPolicies(String policies) {
         this.policies = policies;
+    }
+
+    public String getCustomDetails() {
+        return customDetails;
+    }
+
+    public void setCustomDetails(String customDetails) {
+        this.customDetails = customDetails;
     }
 }

@@ -58,6 +58,7 @@ public class HotelService {
         existing.setAvailable(hotel.isAvailable());
         existing.setAmenities(hotel.getAmenities());
         existing.setPolicies(hotel.getPolicies());
+        existing.setCustomDetails(hotel.getCustomDetails());
         if (hotel.getLocation() != null && !hotel.getLocation().isBlank()) {
             existing.setLocation(hotel.getLocation());
         }
