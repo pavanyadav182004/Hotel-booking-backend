@@ -48,6 +48,8 @@ public class Hotel {
     private boolean available = true;
 
     @ElementCollection
+    @CollectionTable(name = "hotel_amenities", joinColumns = @jakarta.persistence.JoinColumn(name = "hotel_id"))
+    @Column(name = "amenity_name", length = 255)
     private List<String> amenities;
 
     @Column(columnDefinition = "LONGTEXT")
